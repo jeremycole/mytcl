@@ -1,0 +1,52 @@
+MyTCL - TCL API to MySQL
+
+In absense of a real manual, I will provide a function list here.
+Whenever the real manual is done, this space will be taken by notes and
+other stuff you'd expect to find in a readme file.  Sorry for not having
+the manual done by my release date. :(
+
+Here goes:
+
+sql version
+  Returns version information.
+
+sql connect $host $user $pass
+  Connect to MySQL server.
+  Returns a mytcl connection handle.  Save that to a variable and use it
+  where I say $handle :)
+
+sql selectdb $handle $db
+  Select a database on the already connected handle.
+
+sql query $handle $query
+  Run a query on a handle, after you've already used connect and selectdb.
+  Returns a result, use that where I say $result
+
+sql numrows $handle $result
+  Returns number of rows in result set.
+
+sql affectedrows $handle $result
+  Returns the number of affected rows.  Usually you'd use this after an
+  update or delete, etc.
+
+sql insertid $handle
+  Returns the last inserted id that was automatically generated.  ie. an
+  auto_increment column.
+
+sql fetchrow $handle $result
+  Fetch a row from a result set.
+  Returns a TCL list.
+
+sql endquery $handle $result
+  End the query.
+
+sql disconnect $handle
+  Disconnect from the MySQL server.
+
+
+Visit http://www.mytcl.cx/ for the most current information!
+
+Thanks,
+
+Jeremy Cole <jcole@mytcl.cx>
+

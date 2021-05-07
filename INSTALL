@@ -1,0 +1,50 @@
+MyTCL - TCL API to MySQL
+
+Installation Instructions
+
+
+1. Edit the Makefile
+
+Edit the Makefile, and uncomment the lines that apply to you in the
+Operating Systems section.  There are specific lines for FreeBSD, Linux,
+and Solaris.  These should usually work.  Your mileage may very, if you
+know what you are doing, make it work, and send me details of what you had
+to change.  
+
+You must also edit the INSTALL_DIR, MYSQL_LIB, MYSQL_INC, and LIBS lines
+to reflect your system.  Soon, I'll have a configure script, so none of
+this will be necessary, but it really isn't that hard.
+
+
+2. Run 'make'
+
+If you didn't do step 1 correctly, this will most likely fail.  If it
+does, try step 1 again, if you can't get it to work, email me what your
+error message is, and how your system is set up, and I will try and make
+it work for you.  If it is a compatibility problem, I may need access to
+your system to fix my code on your specific setup.
+
+
+3. Run 'make install'
+
+This should copy the mytcl extension into your TCL library directory that
+you specified in the Makefile.  If it fails, try editing INSTALL_DIR in
+the Makefile.
+
+
+4. Read README and examples/*
+
+I have included a function list in README.  Use it.  If anything is
+unclear, or if something seems not to work, email me.
+
+
+This should help a little with getting MyTCL installed on your system.
+After you have it installed, you can use it to write tclsh scripts that
+connect to MySQL or eggdrop bots that are smarter than the average bear,
+or whatever.  If you need any help, or if something is just totally
+broken, email me about it and I'll try to get back to you as soon as
+possible.
+
+Thanks,
+
+Jeremy Cole <jeremy@mysql.com>
